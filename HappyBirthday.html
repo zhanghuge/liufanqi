@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <script src="birthday.js"></script>
     <title>登入界面</title>
-    <link rel="stylesheet" href="base.css" />
+    <!-- <link rel="stylesheet" href="base.css" /> -->
     <!-- <style>
       * {
         padding: 0;
@@ -40,25 +39,9 @@
       alert("我觉得你也" + name);
       alert("下面请认真填写哦");
     </script> -->
-    <script>
-      window.onload = function () {
-        var image = document.getElementById("first");
-        var next = document.getElementById("next");
-        var prev = document.getElementById("prev");
-        count = 8;
-        inDex = 1;
-        next.onclick = function () {
-          inDex = inDex + 1 > count ? count : inDex + 1;
-          image.src = "file:E://VS documents//birthday//" + inDex + ".jpg";
-        };
-        prev.onclick = function () {
-          inDex = inDex - 1 <= 0 ? count : inDex - 1;
-          image.src = "file:E://VS documents//birthday//" + inDex + ".jpg";
-        };
-      };
-    </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- <div>
       <marquee behavior="alertnate" direction="right" scrollamount="10"
         ><h2>祝你生日快乐</h2></marquee
@@ -92,12 +75,10 @@
         ><h2>Happy Birthday To You</h2></marquee
       >
     </div> -->
-    <img
-      src="file:E://VS documents//birthday//1.jpg"
-      alt="哈皮"
-      id="first"
-      height="200px"
-    />
-    <br /><button id="next">上一张</button><button id="prev">下一张</button>
-  </body>
+    <div style="margin: 100px auto">
+        <img src="https://zhanghuge.github.io/liufanqi/image/1.jpg" alt="哈皮" id="first" height="100px" />
+        <br /><button id="next">上一张</button><button id="prev">下一张</button>
+    </div>
+</body>
+
 </html>
