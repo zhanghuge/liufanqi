@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>登入界面</title>
+    <link rel="stylesheet" href="base.css" />
+    <!-- <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        height: 100%;
+        width: 720px;
+      }
+      body {
+        font-size: 14px;
+        background-image: linear-gradient(to right, #43cea2, #185a9d);
+      }
+      @font-face {
+        font-family: myFont;
+        src: url("汉仪雪君体繁.ttf"), url("STHUPO.TTF");
+      }
+      fieldset {
+        height: 500px;
+        width: 300px;
+        margin: 100px auto;
+      }
+      h2 {
+        font-family: myFont;
+      }
+    </style> -->
+    <!-- <script>
+      var name = prompt("你平常想我吗？");
+      alert("我觉得你也" + name);
+      alert("下面请认真填写哦");
+    </script> -->
+    <script>
+      window.onload = function () {
+        var image = document.getElementById("first");
+        var next = document.getElementById("next");
+        var prev = document.getElementById("prev");
+        count = 8;
+        inDex = 1;
+        next.onclick = function () {
+          inDex = inDex + 1 > count ? count : inDex + 1;
+          image.src = "file:E://VS documents//birthday//" + inDex + ".jpg";
+        };
+        prev.onclick = function () {
+          inDex = inDex - 1 <= 0 ? count : inDex - 1;
+          image.src = "file:E://VS documents//birthday//" + inDex + ".jpg";
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <!-- <div>
+      <marquee behavior="alertnate" direction="right" scrollamount="10"
+        ><h2>祝你生日快乐</h2></marquee
+      >
+    </div>
+    <div>
+      <fieldset style="padding: 40px">
+        <legend>寿星请输入您的信息</legend>
+
+        <form action="" style="padding: 20px; line-height: 60px">
+          姓名：<input type="text" placeholder="请输入您的姓名" required />
+          日期：<input type="date" /><br />
+          <label for="qidai"> 期待</label
+          ><input type="radio" id="qidai" value="qidai" name="op" />
+          <label for="buqidai"> 不期待</label
+          ><input type="radio" id="buqidai" name="op" /> <br />美丽<input
+          type="checkbox" value="美丽" / > 聪慧<input
+            type="checkbox"
+            value="聪慧"
+          />持家<input type="checkbox" value="持家" /> 大方<input
+            value="大方"
+            type="checkbox"
+          /><br />
+          <input type="submit" value="确认" />
+          <input type="reset" value="重填" />
+        </form>
+      </fieldset>
+    </div>
+    <div>
+      <marquee behavior="alertnate" direction="right" scrollamount="10"
+        ><h2>Happy Birthday To You</h2></marquee
+      >
+    </div> -->
+    <img
+      src="file:E://VS documents//birthday//1.jpg"
+      alt="哈皮"
+      id="first"
+      height="200px"
+    />
+    <br /><button id="next">上一张</button><button id="prev">下一张</button>
+  </body>
+</html>
